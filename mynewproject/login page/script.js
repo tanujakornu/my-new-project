@@ -1,12 +1,14 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
-    
+    event.preventDefault(); // Prevent form refresh
+
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
-    
-    if (username && password) {
-        alert("Login successful (Placeholder for backend authentication)");
+
+    // Dummy authentication
+    if (username === "user" && password === "pass") { 
+        alert("Login successful!");
+        window.location.href = "../dashboard/index.html"; // Redirect to dashboard
     } else {
-        alert("Please enter both username and password.");
+        alert("Invalid username or password.");
     }
 });
